@@ -57,7 +57,7 @@ class Figure:
             ax.set_title(title)
             return
 
-        x = np.arange(len(locations))  # numeric positions instead of raw strings
+        x = np.arange(len(locations))
 
         counts = {g: Counter() for g in groups}
         for row in rows:
@@ -91,7 +91,7 @@ class Figure:
 
         ax.set_xticks(x)
         ax.set_xticklabels(locations)
-        ax.set_xlim(-0.5, len(locations) - 0.5)  # explicit padding so first/last bars aren't clipped
+        ax.set_xlim(-0.5, len(locations) - 0.5)
 
         ax.set_title(title)
         ax.set_ylabel("Vessel Count")
